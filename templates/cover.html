@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Renaissance Piece{% endblock %}
+
+{% block content %}
+<div class="portada text-center my-5">
+    <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Logo de Renaissance Piece" class="img-fluid mb-4 logo-portada">
+    <p class="lead">Una obra inspirada en One Piece y Grand Piece Online</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card mb-4 shadow-sm portada-card">
+                <div class="card-body">
+                    <h4 class="card-title">Sobre los autores</h4>
+                    <p class="card-text">
+                        Esta obra es una creación de un equipo de apasionados por el manga y la aventura. Nuestra meta es
+                        combinar la emoción de la exploración en alta mar con una narrativa profunda y personal.
+                    </p>
+                    <p class="card-text">
+                        A través de este manga, exploramos temas de amistad, sueños y la búsqueda de la libertad. Esperamos
+                        que disfrutes cada capítulo.
+                    </p>
+                </div>
+            </div>
+            <a href="{{ url_for('literario') }}" class="btn btn-primary btn-lg mt-3">Comenzar a leer</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

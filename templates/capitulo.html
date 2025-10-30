@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ titulo }} - Renaissance Piece{% endblock %}
+
+{% block content %}
+<div class="container main-card mt-4">
+    <div class="d-flex justify-content-between align-items-start mb-3">
+        <h2 class="mb-0">{{ titulo }}</h2>
+        <a href="{{ url_for('literario') }}" class="btn btn-sm btn-outline-secondary">Volver</a>
+    </div>
+
+    <div class="card chapter-body">
+        <div class="card-body">
+            <pre class="contenido-pre mb-0">{{ contenido }}</pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
