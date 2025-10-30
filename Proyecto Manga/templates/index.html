@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Literario - Renaissance Piece{% endblock %}
+
+{% block content %}
+<h1>Parte Literaria</h1>
+<ul class="list-group">
+    {% for cap in capitulos %}
+    <li class="list-group-item">
+        <a href="{{ url_for('mostrar_capitulo', nombre=cap.nombre_archivo) }}">
+            {{ cap.nombre_mostrar }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('portada') }}" class="btn btn-secondary mt-3">Inicio</a>
+{% endblock %}

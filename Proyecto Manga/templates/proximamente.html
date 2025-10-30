@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Fondo degradado */
+    .coming-soon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 80vh;
+        background: linear-gradient(135deg, #ff9a00, #ff6f00);
+        color: white;
+        padding: 20px;
+    }
+
+    /* Animación de aparición */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Botón más llamativo */
+    .btn-home {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 24px;
+        background: #ffffff;
+        color: #ff6f00;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .btn-home:hover {
+        background: #ffe0b2;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="coming-soon-container">
+    <h1 class="fade-in" style="animation-delay: 0s;">🚧 Próximamente 🚧</h1>
+    <p class="fade-in" style="animation-delay: 0.3s; font-size: 1.2rem;">
+        Estamos trabajando duro para traerte esta sección muy pronto.
+    </p>
+    <a href="/" class="btn-home fade-in" style="animation-delay: 0.6s;">🏠 Volver al inicio</a>
+</div>
+{% endblock %}
